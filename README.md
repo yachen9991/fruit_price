@@ -15,9 +15,9 @@ import json
 import tkinter
 import datetime
 ```
-* json : 處理API回傳的json 型態資料
-* tkinter : 製作python GUi
-* datetime : 獲得今日日期
+* **json** : 處理API回傳的json 型態資料
+* **tkinter** : 製作python GUi
+* **datetime** : 獲得今日日期
 
 ## Details of the approach
 先利用農委會API要求資料
