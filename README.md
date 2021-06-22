@@ -62,4 +62,3 @@ r = requests.get(url)
 PS.日期通常不會是連續的，市場會休市。
 ## References
 1. [農委會 - 農業開放資料服務平台](https://agridata.coa.gov.tw/api.aspx#operations-tag-%E4%BA%A4%E6%98%93%E8%A1%8C%E6%83%85).
-1. [matplotlib](https://matplotlib.org/)
