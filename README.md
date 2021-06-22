@@ -60,7 +60,7 @@ r = requests.get(url)
 選擇後並按下Show Chart 按鈕
 顯示本月初到今日，所選擇的水果及市場平均價格折線圖
 
-![image](https://github.com/yachen9991/fruit_price/blob/main/img/result.jpg)
+![image](https://github.com/yachen9991/fruit_price/blob/main/img/result2.jpg)
 
 PS.日期通常不會是連續的，市場會休市。
 ## References
