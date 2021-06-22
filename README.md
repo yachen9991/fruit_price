@@ -4,17 +4,12 @@
 用於查詢本月水果市價資料視覺化軟體
 
 讓有購買大量水果的商家，可以一目了然該水果在本月的價格
-可以省錢買下大量便宜的水果，商家用心 顧客安心
+可以省錢買下大量便宜的水果，商家用心 顧客安心。
 
 ## Build process
 軟體安裝的套件有:
-* requests (2.25.1) : 用於要求API回應資料
-* matplotlib (3.4.1) : 製作Line Chart
-```python
-import json
-import tkinter
-import datetime
-```
+* [requests](https://pypi.org/project/requests/) (2.25.1) : 用於要求API回應資料
+* [matplotlib](https://pypi.org/project/matplotlib/) (3.4.1) : 製作Line Chart
 * **json** : 處理API回傳的json 型態資料
 * **tkinter** : 製作python GUi
 * **datetime** : 獲得今日日期
@@ -28,7 +23,9 @@ import datetime
 * **CropName**  品項名稱
 * **MarketName**  市場名稱
 ```python
-url = "https://agridata.coa.gov.tw/api/v1/AgriProductsTransType/?Start_time=110."+month+".01&End_time=110."+month+"."+day+"&CropCode="+CropCodes[numc]+"&CropName="+CropNames[numc]+"&MarketName="+MarketNames[numm]
+url = "https://agridata.coa.gov.tw/api/v1/AgriProductsTransType/?Start_time=110."+month+".01&End_time=110."+month+"."+day+"
+&CropCode="+CropCodes[numc]+"&CropName="+CropNames[numc]+"&MarketName="+MarketNames[numm]
+
 r = requests.get(url)
 ```
 回傳資料型態如下面
@@ -64,5 +61,5 @@ r = requests.get(url)
 
 PS.日期通常不會是連續的，市場會休市。
 ## References
-[農委會 - 農業開放資料服務平台](https://agridata.coa.gov.tw/api.aspx#operations-tag-%E4%BA%A4%E6%98%93%E8%A1%8C%E6%83%85).
-
+1. [農委會 - 農業開放資料服務平台](https://agridata.coa.gov.tw/api.aspx#operations-tag-%E4%BA%A4%E6%98%93%E8%A1%8C%E6%83%85).
+1. [matplotlib](https://matplotlib.org/)
