@@ -10,7 +10,7 @@
 軟體安裝的套件有:
 * requests (2.25.1) : 用於要求API回應資料
 * matplotlib (3.4.1) : 製作Line Chart
-```
+```python
 import json
 import tkinter
 import datetime
@@ -27,12 +27,12 @@ import datetime
 * **CropCode**  品項號碼
 * **CropName**  品項名稱
 * **MarketName**  市場名稱
-```
+```python
 url = "https://agridata.coa.gov.tw/api/v1/AgriProductsTransType/?Start_time=110."+month+".01&End_time=110."+month+"."+day+"&CropCode="+CropCodes[numc]+"&CropName="+CropNames[numc]+"&MarketName="+MarketNames[numm]
 r = requests.get(url)
 ```
 回傳資料型態如下面
-```python
+```json
  data:{
      "TransDate": "110.06.09",
      "CropCode": "R1",
