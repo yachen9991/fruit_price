@@ -8,12 +8,8 @@
 
 ## Build process
 軟體安裝的套件有:
-```
-requests 2.25.1
-matplotlib 3.4.1
-```
-* requests : 用於要求API回應資料
-* matplotlib : 製作Line Chart
+* requests (2.25.1) : 用於要求API回應資料
+* matplotlib (3.4.1) : 製作Line Chart
 ```
 import json
 import tkinter
@@ -26,17 +22,17 @@ import datetime
 ## Details of the approach
 先利用農委會API要求資料
 需要傳遞以下參數 : 
-* Start_time 資料開始時間
-* End_time  資料結束時間
-* CropCode  品項號碼
-* CropName  品項名稱
-* MarketName  市場名稱
+* **Start_time** 資料開始時間
+* **End_time**  資料結束時間
+* **CropCode**  品項號碼
+* **CropName**  品項名稱
+* **MarketName**  市場名稱
 ```
 url = "https://agridata.coa.gov.tw/api/v1/AgriProductsTransType/?Start_time=110."+month+".01&End_time=110."+month+"."+day+"&CropCode="+CropCodes[numc]+"&CropName="+CropNames[numc]+"&MarketName="+MarketNames[numm]
 r = requests.get(url)
 ```
 回傳資料型態如下面
-```
+```python
  data:{
      "TransDate": "110.06.09",
      "CropCode": "R1",
@@ -58,8 +54,8 @@ r = requests.get(url)
 
 ![image](https://github.com/yachen9991/fruit_price/blob/main/img/combobox.jpg)
 
-* 水果 : 百香果-改良種 ,香蕉 ,鳳梨-金鑽鳳梨 ,芒果-愛文 ,西瓜-大西瓜 ,葡萄-巨峰
-* 市場 : 台北二 ,台北一 ,板橋區 ,三重區
+* **水果** : 百香果-改良種 ,香蕉 ,鳳梨-金鑽鳳梨 ,芒果-愛文 ,西瓜-大西瓜 ,葡萄-巨峰
+* **市場** : 台北二 ,台北一 ,板橋區 ,三重區
 
 選擇後並按下Show Chart 按鈕
 顯示本月初到今日，所選擇的水果及市場平均價格折線圖
@@ -68,5 +64,5 @@ r = requests.get(url)
 
 PS.日期通常不會是連續的，市場會休市。
 ## References
-農委會 - 農業開放資料服務平台
-https://agridata.coa.gov.tw/api.aspx#operations-tag-%E4%BA%A4%E6%98%93%E8%A1%8C%E6%83%85
+[農委會 - 農業開放資料服務平台](https://agridata.coa.gov.tw/api.aspx#operations-tag-%E4%BA%A4%E6%98%93%E8%A1%8C%E6%83%85).
+
